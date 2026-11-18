@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Arrays | Lists</title>
+</head>
+<body>
+
+<script>
+    let fruits = ["Apples", "Bananas", "Oranges"]
+    let ob1 = {name:"John", age: 25, gender: "Male"}
+    let ob2 = {name:"Hilda", age: 26, gender: "Female"}
+    let people = [ob1, ob2]
+
+    console.log(fruits.length) //counts number of items
+    fruits.push("Passion") // adds items at the end of the array
+    console.log(fruits)
+    // fruits.pop() //removes last item
+    console.log(fruits)
+    console.log(people[0].name)
+
+    //for each loop
+/*    for(const fruit of fruits){
+        console.log(fruit)
+    }*/
+    fruits.forEach((fruit) => {
+        console.log(fruit)
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Functions</title>
+</head>
+<body>
+
+<script>/*
+    function greet(){
+        alert("Hello")
+    }
+    greet();*/
+
+function add(a, b) {
+    let result = a + b
+    return result;
+}
+
+alert(add(53, 98))
+
+
+
+function greeting(name = "Guest") {
+    alert(`Hello ${name}`)
+}
+
+greeting()
+greeting('Halima')
+
+
+
+const multiply = function(a, b){
+    return a * b
+}
+alert(multiply(53, 98))
+
+
+//arrow functions
+const areaCircle = (r) => 22/7 * r**2
+
+alert(areaCircle(8))
+
+let scores = [56,89,90,32,58,76,61,47,87,12]
+let newScores= scores.map((score)=>score+2) //map function is used to modify contents inside your array
+// console.log(newScores)
+
+
+function addByTwo(value){
+    return value+2
+}
+console.log(scores.map(addByTwo))
+
+
+const addByThree = (a) => a+ 3
+console.log(scores.map(addByThree))
+
+let result = scores.filter((score)=> score>65)
+console.log(result)
+
+console.log(scores.find((n)=> n > 80)) //finds the first score that is above 80
+
+
+let new_result = scores.filter((x)=> x < 80).map(score => score+10 )
+console.log(new_result)
+</script>
+</body>
+</html>
