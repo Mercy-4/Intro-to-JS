@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Es 6 Features</title>
+</head>
+<body>
+
+<script>
+    //template literals
+    let x = 13
+    PI= 22/7
+    console.log(`${x} PI is ${PI}`) //`Ksh ${price}`
+
+    const add = (a, b) => a + b //the arrow points to the calculation
+    console.log(add(67, 198))
+
+    //destructuring / unpack values
+    const patient ={
+        name: "John Doe",
+        dob: "23/10/2003",
+        gender: "Male"
+    }
+
+/*
+    //retrieving values using the old way
+    let name = patient.name;
+    let dob = patient.dob;
+    let gender = patient.gender;
+
+    //new method of unpacking values/ destructuring
+    const {name, dob, gender} = patient
+    console.log(`Patient name is ${name} and gender is ${gender} and dob is ${dob}`)
+
+    //unpacking an array into variables
+    let details = ["John", "Jane"]
+    let [name1, name2] = details
+*/
+
+/*    //default param
+    function divide(a, b=2){
+        console.log(a/b)
+    }
+    divide(10) // uses 2 as the default value of b
+    divide(100, 4) // uses 4 as the new value of b to divide a*/
+
+    function divide(a, b, rounded=false){
+        let res = a/b
+        if(rounded===true){
+            return Math.round(res)
+        }
+        return res
+    }
+    let res1= divide(100, 4, true) //answer will be rounded off because the 3rd parameter is provided
+    let res2 = divide(100, 3) //answer is not rounded since 3rd parameter is not provided and the default value is False
+
+    console.log(res1, res2)
+
+    //a function that can add any amount of parameters using a spread operator
+    function flexibleAdd(...nums){
+        let total = 0
+        for(let value of nums){
+            total += value
+        }
+        return total
+    }
+    console.log(flexibleAdd(10, 90, 67, 567, 27654, 654))
+
+
+   //spreading values to have one merged array using a spread operator
+    let people = ["Jill", "Joe", "Julie"]
+    let others = ["Anita", "Anna"]
+
+    let merged = [...people,...others]
+    console.log(merged)
+
+    //using spread operator to add more values to an array
+    let data = [...people,...others, "Hilda", "Helen"]
+    console.log(data)
+
+    //modules - split files
+
+</script>
+<script src="js/main.js"></script>
+</body>
+</html>
